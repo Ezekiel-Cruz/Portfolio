@@ -1,9 +1,3 @@
-import Logo from "../assets/Dev.png";
-import Facebook from "../assets/facebook.png";
-import Instagram from "../assets/instagram.png";
-import LinkedIn from "../assets/linkedin.png";
-import GitHub from "../assets/github.png";
-
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -22,7 +16,11 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <img src={Logo} alt="Dev.Sigma Logo" className="w-10 h-10 mr-3" />
+              <img
+                src="/Dev.png"
+                alt="Dev.Sigma Logo"
+                className="w-10 h-10 mr-3"
+              />
               <h3 className="text-2xl font-bold">Dev.Sigma</h3>
             </div>
             <p className="text-base-content/70 mb-4 max-w-md">
@@ -35,28 +33,28 @@ export default function Footer() {
                 className="btn btn-circle btn-outline btn-sm hover:btn-primary transition-all duration-300"
                 aria-label="Facebook"
               >
-                <img src={Facebook} alt="Facebook" className="w-4 h-4" />
+                <img src="/facebook.png" alt="Facebook" className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="btn btn-circle btn-outline btn-sm hover:btn-primary transition-all duration-300"
                 aria-label="Instagram"
               >
-                <img src={Instagram} alt="Instagram" className="w-4 h-4" />
+                <img src="/instagram.png" alt="Instagram" className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="btn btn-circle btn-outline btn-sm hover:btn-primary transition-all duration-300"
                 aria-label="LinkedIn"
               >
-                <img src={LinkedIn} alt="LinkedIn" className="w-4 h-4" />
+                <img src="/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="btn btn-circle btn-outline btn-sm hover:btn-primary transition-all duration-300"
                 aria-label="GitHub"
               >
-                <img src={GitHub} alt="GitHub" className="w-4 h-4" />
+                <img src="/github.png" alt="GitHub" className="w-4 h-4" />
               </a>
             </div>
           </div>

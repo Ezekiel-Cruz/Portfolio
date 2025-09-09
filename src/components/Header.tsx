@@ -1,4 +1,3 @@
-import Logo from "../assets/Dev.png";
 import { useState, useEffect } from "react";
 
 export default function Header() {
@@ -38,7 +37,11 @@ export default function Header() {
           onClick={() => scrollToSection("hero")}
           className="btn btn-ghost text-xl cursor-pointer"
         >
-          <img src={Logo} alt="Logo" className="inline-block w-8 h-8 mr-2" />
+          <img
+            src="/Dev.png"
+            alt="Logo"
+            className="inline-block w-8 h-8 mr-2"
+          />
           Dev.Sigma
         </a>
       </div>

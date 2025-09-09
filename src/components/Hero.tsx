@@ -1,15 +1,9 @@
-import HeroImage from "../assets/HeroDev.jpg";
-import Facebook from "../assets/facebook.png";
-import Instagram from "../assets/instagram.png";
-import LinkedIn from "../assets/linkedin.png";
-import GitHub from "../assets/github.png";
-
 export default function Hero() {
   return (
     <section id="hero" className="hero min-h-screen bg-base-100 pt-16">
       <div className="hero-content flex-col lg:flex-row max-w-6xl mx-auto px-4">
         <img
-          src={HeroImage}
+          src="/HeroDev.jpg"
           alt="Dev.Sigma"
           className="max-w-sm rounded-lg shadow-2xl lg:mr-10"
         />
@@ -38,28 +32,28 @@ export default function Hero() {
               className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
               aria-label="Facebook"
             >
-              <img src={Facebook} alt="Facebook" className="w-6 h-6" />
+              <img src="/facebook.png" alt="Facebook" className="w-6 h-6" />
             </a>
             <a
               href="#"
               className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
               aria-label="Instagram"
             >
-              <img src={Instagram} alt="Instagram" className="w-6 h-6" />
+              <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
             </a>
             <a
               href="#"
               className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
               aria-label="LinkedIn"
             >
-              <img src={LinkedIn} alt="LinkedIn" className="w-6 h-6" />
+              <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6" />
             </a>
             <a
               href="#"
               className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
               aria-label="GitHub"
             >
-              <img src={GitHub} alt="GitHub" className="w-6 h-6" />
+              <img src="/github.png" alt="GitHub" className="w-6 h-6" />
             </a>
           </div>
         </div>

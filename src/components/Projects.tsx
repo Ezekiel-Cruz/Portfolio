@@ -1,13 +1,10 @@
-import Cooking from "../assets/CookingWebsite.png";
-import Event from "../assets/EventWebsite.png";
-
 export default function Projects() {
   const projects = [
     {
       title: "Cooking Recipe Website",
       description:
         "An interactive recipe platform featuring user-submitted dishes, step-by-step cooking guides, ingredient search, and a personalized favorites dashboard.",
-      image: Cooking,
+      image: "/CookingWebsite.png",
       tech: ["HTML", "CSS", "JS", "PHP", "SQL"],
       featured: true,
     },
@@ -15,7 +12,7 @@ export default function Projects() {
       title: "Event Management Platform",
       description:
         "Comprehensive event planning tool with scheduling, guest management, and real-time collaboration features.",
-      image: Event,
+      image: "/EventWebsite.png",
       tech: ["HTML", "CSS", "JS", "PHP", "SQL"],
       featured: true,
     },
