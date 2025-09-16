@@ -1,25 +1,7 @@
+import ProjectCard from "./ProjectCard";
+import { featuredProjects } from "../data/projects";
+
 export default function Projects() {
-  const projects = [
-    {
-      title: "Cooking Recipe Website",
-      description:
-        "An interactive recipe platform featuring user-submitted dishes, step-by-step cooking guides, ingredient search, and a personalized favorites dashboard.",
-      image: "/CookingWebsite.png",
-      tech: ["HTML", "CSS", "JS", "PHP", "SQL"],
-      featured: true,
-    },
-    {
-      title: "Event Management Platform",
-      description:
-        "Comprehensive event planning tool with scheduling, guest management, and real-time collaboration features.",
-      image: "/EventWebsite.png",
-      tech: ["HTML", "CSS", "JS", "PHP", "SQL"],
-      featured: true,
-    },
-  ];
-
-  const featuredProjects = projects.filter((project) => project.featured);
-
   return (
     <section id="projects" className="py-20 bg-base-100">
       <div className="container mx-auto px-4">
@@ -34,34 +16,8 @@ export default function Projects() {
         {/* Featured Projects */}
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredProjects.map((project, index) => (
-              <div key={index} className="card bg-base-200 shadow-xl">
-                <figure>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover"
-                  />
-                </figure>
-                <div className="card-body">
-                  <div className="flex items-center gap-2 mb-2">
-                    <h3 className="card-title text-xl">{project.title}</h3>
-                  </div>
-                  <p className="text-base-content/70 mb-4">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech, techIndex) => (
-                      <span key={techIndex} className="badge badge-outline">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="card-actions justify-end"></div>
-                </div>
-              </div>
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
             ))}
           </div>
         </div>
