@@ -42,7 +42,7 @@ export default function Header() {
             alt="Logo"
             className="inline-block w-8 h-8 mr-2"
           />
-          Dev.Sigma
+          Ezekiel Cruz
         </a>
       </div>
       <div className="flex-none">

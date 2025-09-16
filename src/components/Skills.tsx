@@ -14,15 +14,47 @@ import {
 export default function Skills() {
   // Core tech logos for marquee — updated per request
   const coreTechLogos = [
-    { node: <SiHtml5 size={48} />, title: "HTML", href: "https://developer.mozilla.org/docs/Web/HTML" },
-    { node: <SiCss3 size={48} />, title: "CSS", href: "https://developer.mozilla.org/docs/Web/CSS" },
-  { node: <SiOpenjdk size={48} />, title: "Java", href: "https://www.java.com" },
-    { node: <SiPython size={48} />, title: "Python", href: "https://www.python.org" },
+    {
+      node: <SiHtml5 size={48} />,
+      title: "HTML",
+      href: "https://developer.mozilla.org/docs/Web/HTML",
+    },
+    {
+      node: <SiCss3 size={48} />,
+      title: "CSS",
+      href: "https://developer.mozilla.org/docs/Web/CSS",
+    },
+    {
+      node: <SiOpenjdk size={48} />,
+      title: "Java",
+      href: "https://www.java.com",
+    },
+    {
+      node: <SiPython size={48} />,
+      title: "Python",
+      href: "https://www.python.org",
+    },
     { node: <SiPhp size={48} />, title: "PHP", href: "https://www.php.net" },
-    { node: <SiNodedotjs size={48} />, title: "Node.js", href: "https://nodejs.org" },
-    { node: <SiTypescript size={48} />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-    { node: <SiFlutter size={48} />, title: "Flutter", href: "https://flutter.dev" },
-    { node: <SiMysql size={48} />, title: "MySQL", href: "https://www.mysql.com" },
+    {
+      node: <SiNodedotjs size={48} />,
+      title: "Node.js",
+      href: "https://nodejs.org",
+    },
+    {
+      node: <SiTypescript size={48} />,
+      title: "TypeScript",
+      href: "https://www.typescriptlang.org",
+    },
+    {
+      node: <SiFlutter size={48} />,
+      title: "Flutter",
+      href: "https://flutter.dev",
+    },
+    {
+      node: <SiMysql size={48} />,
+      title: "MySQL",
+      href: "https://www.mysql.com",
+    },
   ];
   const techStacks = [
     {

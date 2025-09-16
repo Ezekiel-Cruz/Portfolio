@@ -1,60 +1,47 @@
+import TextType from "./TextType";
+
 export default function Hero() {
   return (
     <section id="hero" className="hero min-h-screen bg-base-100 pt-16">
-      <div className="hero-content flex-col lg:flex-row max-w-6xl mx-auto px-4">
+      <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl mx-auto px-4">
         <img
-          src="/HeroDev.jpg"
-          alt="Dev.Sigma"
-          className="max-w-sm rounded-lg shadow-2xl lg:mr-10"
+          src="/Ezekiel.JPG"
+          alt="Ezekiel Cruz"
+          className="max-w-sm rounded-lg shadow-2xl lg:ml-10"
         />
         <div className="text-center lg:text-left">
-          <h1 className="text-3xl sm:text-5xl font-light mb-2">
-            I don't follow patterns
+          <h1 className="mb-6 mt-6 leading-tight space-y-1 sm:space-y-2">
+            <span className="block text-5xl sm:text-6xl font-extrabold">
+              I’m <span>Ezekiel Cruz</span>,
+            </span>
+            <span className="block text-2xl sm:text-3xl font-medium text-base-content/80">
+              a developer who builds with purpose.
+            </span>
+            <span className="block text-2xl sm:text-3xl font-medium text-base-content/80">
+              Always learning and creating.
+            </span>
           </h1>
-          <h1 className="text-5xl sm:text-8xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            I define them.
-          </h1>
-          <p className="text-xl sm:text-2xl font-light mb-2">
-            Bro, I'm Dev.Sigma
-          </p>
-          <p className="text-xl sm:text-2xl font-light mb-8">
-            I create my own path.
-          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start mb-8">
-            <button className="btn btn-primary btn-lg">Download CV</button>
-            <button className="btn btn-outline btn-lg">Get in Touch</button>
+          <div className="mb-8 mt-8">
+            <TextType
+              text={[
+                "Frameworks guide me.",
+                "Libraries support me.",
+                "But innovation?",
+                "That’s pure me.",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+              className="text-xl sm:text-2xl font-semibold tracking-tight"
+              cursorClassName="text-base-content/70"
+            />
           </div>
 
-          <div className="flex gap-4 justify-center lg:justify-start">
-            <a
-              href="#"
-              className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
-              aria-label="Facebook"
-            >
-              <img src="/facebook.png" alt="Facebook" className="w-6 h-6" />
-            </a>
-            <a
-              href="#"
-              className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
-              aria-label="Instagram"
-            >
-              <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
-            </a>
-            <a
-              href="#"
-              className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
-              aria-label="LinkedIn"
-            >
-              <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6" />
-            </a>
-            <a
-              href="#"
-              className="btn btn-circle btn-outline hover:btn-primary transition-all duration-300"
-              aria-label="GitHub"
-            >
-              <img src="/github.png" alt="GitHub" className="w-6 h-6" />
-            </a>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
+            <button className="btn btn-primary btn-lg">Download CV</button>
+            <button className="btn btn-outline btn-lg">Get in Touch</button>
           </div>
         </div>
       </div>

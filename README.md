@@ -1,4 +1,3 @@
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -8,7 +7,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-# Dev.Sigma Portfolio
+# Ezekiel Cruz Portfolio
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
 
@@ -86,13 +85,13 @@ src/
 
 ## Contact
 
-- **Email**: dev.sigma@example.com
+- **Email**: ezekiel.cruz@example.com
 - **Location**: Malolos, Bulacan
 - **Website**: [Your Portfolio](https://your-domain.com)
 
 ## License
 
-© 2025 Dev.Sigma. All rights reserved.
+© 2025 Ezekiel Cruz. All rights reserved.
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
@@ -122,6 +121,9 @@ export default tseslint.config([
   },
 ]);
 ```
+
 =======
+
 # Portfolio
+
 My portfolio

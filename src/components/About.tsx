@@ -8,7 +8,7 @@ export default function About() {
               <code>const developer = &#123;</code>
             </pre>
             <pre data-prefix="2">
-              <code> name: "Dev.Sigma",</code>
+              <code> name: "Ezekiel Cruz",</code>
             </pre>
             <pre data-prefix="3">
               <code> role: "Full Stack Developer",</code>
