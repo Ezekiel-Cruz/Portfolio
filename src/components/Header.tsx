@@ -28,8 +28,10 @@ export default function Header() {
 
   return (
     <div
-      className={`navbar fixed top-0 left-0 right-0 z-50 px-4 lg:px-8 transition-all duration-300 ${
-        isScrolled ? "bg-base-100 shadow-lg backdrop-blur-sm" : "bg-base-100"
+      className={`navbar fixed top-0 left-0 right-0 z-50 px-4 lg:px-8 transition-all duration-300 border-b ${
+        isScrolled
+          ? "bg-base-100/95 backdrop-blur-sm shadow-md border-base-300"
+          : "bg-transparent border-transparent"
       }`}
     >
       <div className="flex-1">

@@ -5,10 +5,21 @@ import WhatIDo from "./components/WhatIDo";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import Squares from "./components/Squares";
 
 function App() {
   return (
-    <div className="min-h-screen bg-base-100">
+    <div className="relative min-h-screen">
+      <div className="fixed inset-0 -z-10 opacity-100">
+        <Squares
+          direction="diagonal"
+          speed={0.35}
+          squareSize={52}
+          borderColor="#00000040"
+          hoverFillColor="#00000088"
+          fadeGradient={false}
+        />
+      </div>
       <Header />
       <Hero />
       <About />

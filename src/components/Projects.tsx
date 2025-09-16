@@ -3,7 +3,7 @@ import { featuredProjects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-base-100">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h2>
@@ -17,7 +17,9 @@ export default function Projects() {
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
+              <div className="bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden">
+                <ProjectCard key={project.title} project={project} />
+              </div>
             ))}
           </div>
         </div>

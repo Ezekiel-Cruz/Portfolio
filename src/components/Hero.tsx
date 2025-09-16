@@ -2,8 +2,11 @@ import TextType from "./TextType";
 
 export default function Hero() {
   return (
-    <section id="hero" className="hero min-h-screen bg-base-100 pt-16">
-      <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl mx-auto px-4">
+    <section
+      id="hero"
+      className="relative hero min-h-screen pt-16 overflow-hidden"
+    >
+      <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl mx-auto px-4 relative">
         <img
           src="/Ezekiel.JPG"
           alt="Ezekiel Cruz"

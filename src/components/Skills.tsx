@@ -133,9 +133,7 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="divider text-2xl font-bold mt-16">
-          My Core Technologies
-        </div>
+        <div className="divider text-2xl font-bold mt-16">My Technologies</div>
 
         {/* Marquee of core stack logos (icons only for core technologies present) */}
         <div className="mt-12">
@@ -149,7 +147,7 @@ export default function Skills() {
               pauseOnHover
               scaleOnHover
               fadeOut
-              ariaLabel="Core technologies"
+              ariaLabel="Technologies marquee"
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 export default function WhatIDo() {
   return (
-    <section id="what-i-do" className="py-20 bg-base-100">
+    <section id="what-i-do" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">What I Do</h2>
@@ -11,7 +11,7 @@ export default function WhatIDo() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="card bg-base-200 shadow-xl">
+          <div className="card bg-base-200/80 backdrop-blur-sm shadow-xl">
             <div className="card-body text-center">
               <div className="text-5xl mb-4">🎨</div>
               <h3 className="card-title justify-center text-2xl mb-4">
@@ -24,7 +24,7 @@ export default function WhatIDo() {
             </div>
           </div>
 
-          <div className="card bg-base-200 shadow-xl">
+          <div className="card bg-base-200/80 backdrop-blur-sm shadow-xl">
             <div className="card-body text-center">
               <div className="text-5xl mb-4">⚙️</div>
               <h3 className="card-title justify-center text-2xl mb-4">
@@ -37,7 +37,7 @@ export default function WhatIDo() {
             </div>
           </div>
 
-          <div className="card bg-base-200 shadow-xl">
+          <div className="card bg-base-200/80 backdrop-blur-sm shadow-xl">
             <div className="card-body text-center">
               <div className="text-5xl mb-4">📱</div>
               <h3 className="card-title justify-center text-2xl mb-4">
