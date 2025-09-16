@@ -1,4 +1,16 @@
+import LogoLoop from "./LogoLoop";
+import { SiReact, SiTailwindcss, SiJavascript } from "react-icons/si";
+
 export default function Skills() {
+  // Core tech logos for marquee
+  // Adjusted to only include technologies present in the current portfolio
+  // React, TypeScript (if desired), Tailwind CSS. Excluding Next.js.
+  // Keeping simple: React, TypeScript, Tailwind CSS
+  const coreTechLogos = [
+    { node: <SiReact size={48} />, title: "React", href: "https://react.dev" },
+    { node: <SiTailwindcss size={48} />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <SiJavascript size={48} />, title: "JavaScript", href: "https://developer.mozilla.org/docs/Web/JavaScript" },
+  ];
   const techStacks = [
     {
       title: "Frontend",
@@ -80,6 +92,7 @@ export default function Skills() {
           My Core Technologies
         </div>
 
+        {/* Badges grid (kept) */}
         <div className="flex flex-wrap justify-center gap-4 mt-16">
           {[
             "Java",
@@ -100,6 +113,23 @@ export default function Skills() {
               {tech}
             </div>
           ))}
+        </div>
+
+        {/* Marquee of core stack logos (icons only for core technologies present) */}
+        <div className="mt-12">
+          <div className="rounded-box bg-base-100 p-4">
+            <LogoLoop
+              logos={coreTechLogos}
+              speed={120}
+              direction="left"
+              logoHeight={48}
+              gap={40}
+              pauseOnHover
+              scaleOnHover
+              fadeOut
+              ariaLabel="Core technologies"
+            />
+          </div>
         </div>
 
         <div className="text-center mt-12">
