@@ -92,29 +92,6 @@ export default function Skills() {
           My Core Technologies
         </div>
 
-        {/* Badges grid (kept) */}
-        <div className="flex flex-wrap justify-center gap-4 mt-16">
-          {[
-            "Java",
-            "Python",
-            "ReactJS",
-            "PHP",
-            "MySQL",
-            "Flutter",
-            "JavaScript",
-            "HTML/CSS",
-            "Tailwind CSS",
-            "Node.js",
-          ].map((tech, index) => (
-            <div
-              key={index}
-              className="badge badge-primary badge-lg p-4 text-sm font-medium hover:badge-secondary transition-colors duration-300 cursor-pointer"
-            >
-              {tech}
-            </div>
-          ))}
-        </div>
-
         {/* Marquee of core stack logos (icons only for core technologies present) */}
         <div className="mt-12">
           <div className="rounded-box bg-base-100 p-4">
@@ -129,25 +106,6 @@ export default function Skills() {
               fadeOut
               ariaLabel="Core technologies"
             />
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <div className="stats shadow">
-            <div className="stat">
-              <div className="stat-title">Programming Languages</div>
-              <div className="stat-value text-primary">6+</div>
-            </div>
-
-            <div className="stat">
-              <div className="stat-title">Years Experience</div>
-              <div className="stat-value text-secondary">3+</div>
-            </div>
-
-            <div className="stat">
-              <div className="stat-title">Projects Completed</div>
-              <div className="stat-value text-accent">5+</div>
-            </div>
           </div>
         </div>
       </div>
