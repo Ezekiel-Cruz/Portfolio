@@ -1,15 +1,28 @@
 import LogoLoop from "./LogoLoop";
-import { SiReact, SiTailwindcss, SiJavascript } from "react-icons/si";
+import {
+  SiHtml5,
+  SiCss3,
+  SiOpenjdk,
+  SiPython,
+  SiPhp,
+  SiNodedotjs,
+  SiTypescript,
+  SiFlutter,
+  SiMysql,
+} from "react-icons/si";
 
 export default function Skills() {
-  // Core tech logos for marquee
-  // Adjusted to only include technologies present in the current portfolio
-  // React, TypeScript (if desired), Tailwind CSS. Excluding Next.js.
-  // Keeping simple: React, TypeScript, Tailwind CSS
+  // Core tech logos for marquee — updated per request
   const coreTechLogos = [
-    { node: <SiReact size={48} />, title: "React", href: "https://react.dev" },
-    { node: <SiTailwindcss size={48} />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-    { node: <SiJavascript size={48} />, title: "JavaScript", href: "https://developer.mozilla.org/docs/Web/JavaScript" },
+    { node: <SiHtml5 size={48} />, title: "HTML", href: "https://developer.mozilla.org/docs/Web/HTML" },
+    { node: <SiCss3 size={48} />, title: "CSS", href: "https://developer.mozilla.org/docs/Web/CSS" },
+  { node: <SiOpenjdk size={48} />, title: "Java", href: "https://www.java.com" },
+    { node: <SiPython size={48} />, title: "Python", href: "https://www.python.org" },
+    { node: <SiPhp size={48} />, title: "PHP", href: "https://www.php.net" },
+    { node: <SiNodedotjs size={48} />, title: "Node.js", href: "https://nodejs.org" },
+    { node: <SiTypescript size={48} />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+    { node: <SiFlutter size={48} />, title: "Flutter", href: "https://flutter.dev" },
+    { node: <SiMysql size={48} />, title: "MySQL", href: "https://www.mysql.com" },
   ];
   const techStacks = [
     {
