@@ -83,7 +83,7 @@ const useResizeObserver = (
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
-    // We depend on the callback identity and the refs array identity
+   
   }, [callback, elements]);
 };
 

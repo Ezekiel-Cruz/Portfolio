@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { featuredProjects } from "../data/projects";
+import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
@@ -7,18 +7,21 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h2>
-          <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+          <p className="text-xl text-base-content/70 max-w-2xl mx-auto mb-8">
             Here are some of the projects I've worked on. Each one represents a
             unique challenge and solution.
           </p>
         </div>
 
-        {/* Featured Projects */}
+        {/* Projects Grid */}
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredProjects.map((project) => (
-              <div className="bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden">
-                <ProjectCard key={project.title} project={project} />
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300"
+              >
+                <ProjectCard project={project} />
               </div>
             ))}
           </div>

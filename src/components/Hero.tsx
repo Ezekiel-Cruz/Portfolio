@@ -1,53 +1,50 @@
+import { Section } from "./ui/Layout";
+import { HeroContent } from "./hero/HeroContent";
+import { HeroActions } from "./hero/HeroActions";
 import TextType from "./TextType";
+import { PERSONAL_INFO, HERO_TYPING_TEXT } from "../constants/personalInfo";
 
 export default function Hero() {
+  const handleContactClick = () => {
+    // Add contact functionality or scroll to contact section
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section
+    <Section
       id="hero"
       className="relative hero min-h-screen pt-16 overflow-hidden"
     >
       <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl mx-auto px-4 relative">
-        <img
-          src="/Ezekiel.JPG"
-          alt="Ezekiel Cruz"
-          className="max-w-sm rounded-lg shadow-2xl lg:ml-10"
-        />
-        <div className="text-center lg:text-left">
-          <h1 className="mb-6 mt-6 leading-tight space-y-1 sm:space-y-2">
-            <span className="block text-5xl sm:text-6xl font-extrabold">
-              I’m <span>Ezekiel Cruz</span>,
-            </span>
-            <span className="block text-2xl sm:text-3xl font-medium text-base-content/80">
-              a developer who builds with purpose.
-            </span>
-            <span className="block text-2xl sm:text-3xl font-medium text-base-content/80">
-              Always learning and creating.
-            </span>
-          </h1>
+        <div className="max-w-sm lg:ml-10">
+          <img
+            src="/Ezekiel.JPG"
+            alt={PERSONAL_INFO.name}
+            className="w-full h-full object-cover rounded-lg shadow-2xl"
+            loading="lazy"
+          />
+        </div>
 
+        <HeroContent
+          name={PERSONAL_INFO.name}
+          subtitle1="a developer who builds with purpose."
+          subtitle2="Always learning and creating."
+        >
           <div className="mb-8 mt-8">
             <TextType
-              text={[
-                "Frameworks guide me.",
-                "Libraries support me.",
-                "But innovation?",
-                "That’s pure me.",
-              ]}
+              text={[...HERO_TYPING_TEXT]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
               cursorCharacter="|"
-              className="text-xl sm:text-2xl font-semibold tracking-tight"
-              cursorClassName="text-base-content/70"
+              className="text-xl sm:text-2xl font-semibold tracking-tight text-base-content"
+              cursorClassName="text-base-content"
             />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
-            <button className="btn btn-primary btn-lg">Download CV</button>
-            <button className="btn btn-outline btn-lg">Get in Touch</button>
-          </div>
-        </div>
+          <HeroActions onContactClick={handleContactClick} />
+        </HeroContent>
       </div>
-    </section>
+    </Section>
   );
 }
