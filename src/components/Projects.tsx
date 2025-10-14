@@ -26,12 +26,6 @@ export default function Projects() {
             ))}
           </div>
         </div>
-
-        <div className="text-center mt-12">
-          <a href="#" className="btn btn-outline btn-primary">
-            View All Projects on GitHub
-          </a>
-        </div>
       </div>
     </section>
   );

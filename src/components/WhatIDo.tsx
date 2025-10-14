@@ -12,14 +12,14 @@ export default function WhatIDo() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Frontend Development */}
           <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
             <div className="card-body">
-              <h3 className="card-title justify-center text-2xl mb-6">
+              <h3 className="card-title justify-center text-xl mb-4">
                 Frontend Development
               </h3>
-              <p className="text-base-content/70 leading-relaxed">
+              <p className="text-base-content/70 leading-relaxed text-sm">
                 I build responsive and high-performing user interfaces using
                 React.js, Tailwind CSS, and Vite. I ensure clean, maintainable
                 code and a seamless user experience across all platforms.
@@ -30,10 +30,10 @@ export default function WhatIDo() {
           {/* Backend Development */}
           <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
             <div className="card-body">
-              <h3 className="card-title justify-center text-2xl mb-6">
+              <h3 className="card-title justify-center text-xl mb-4">
                 Backend Development
               </h3>
-              <p className="text-base-content/70 leading-relaxed">
+              <p className="text-base-content/70 leading-relaxed text-sm">
                 I develop robust and efficient server-side applications using
                 Node.js and Express.js. My implementations are optimized for
                 performance, security, and scalability to support complex
@@ -45,10 +45,10 @@ export default function WhatIDo() {
           {/* Database Management */}
           <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
             <div className="card-body">
-              <h3 className="card-title justify-center text-2xl mb-6">
+              <h3 className="card-title justify-center text-xl mb-4">
                 Database Management
               </h3>
-              <p className="text-base-content/70 leading-relaxed">
+              <p className="text-base-content/70 leading-relaxed text-sm">
                 I design and manage structured databases using MySQL and
                 PostgreSQL. I prioritize data integrity, consistency, and
                 performance to ensure reliable and secure data handling.
@@ -59,10 +59,10 @@ export default function WhatIDo() {
           {/* Full-Stack Integration */}
           <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
             <div className="card-body">
-              <h3 className="card-title justify-center text-2xl mb-6">
+              <h3 className="card-title justify-center text-xl mb-4">
                 Full-Stack Integration
               </h3>
-              <p className="text-base-content/70 leading-relaxed">
+              <p className="text-base-content/70 leading-relaxed text-sm">
                 I integrate frontend and backend systems into cohesive,
                 production-ready web applications. My approach emphasizes
                 stability, speed, and maintainability to support long-term

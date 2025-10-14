@@ -5,8 +5,7 @@ import TextType from "./TextType";
 import { PERSONAL_INFO, HERO_TYPING_TEXT } from "../constants/personalInfo";
 
 export default function Hero() {
-  const handleContactClick = () => {
-    // Add contact functionality or scroll to contact section
+  const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -42,7 +41,7 @@ export default function Hero() {
             />
           </div>
 
-          <HeroActions onContactClick={handleContactClick} />
+          <HeroActions onContactClick={scrollToContact} />
         </HeroContent>
       </div>
     </Section>

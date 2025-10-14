@@ -2,7 +2,7 @@
 export const PERSONAL_INFO = {
   name: "Ezekiel Cruz",
   role: "Aspiring Website Developer",
-  experience: "5+ years",
+  experience: "3+ years",
   passion: "Web Development",
   motto: "Creating digital experiences that inspire",
   location: "Malolos, Bulacan, Philippines",
