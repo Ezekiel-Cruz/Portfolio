@@ -4,7 +4,7 @@ export const PERSONAL_INFO = {
   role: "Aspiring Website Developer",
   experience: "3+ years",
   passion: "Web Development",
-  motto: "Creating digital experiences that inspire",
+  motto: "Always do your best",
   location: "Malolos, Bulacan, Philippines",
   university: "La Consolacion University of the Philippines",
   email: "ezekielcruz019@gmail.com",

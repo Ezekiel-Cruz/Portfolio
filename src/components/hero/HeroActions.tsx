@@ -19,7 +19,7 @@ export const HeroActions: React.FC<HeroActionsProps> = ({ onContactClick }) => {
         onClick={handleDownloadCV}
         className="btn btn-primary btn-lg hover:scale-105 transition-transform"
       >
-        📄 Download CV
+        Download CV
       </a>
       <Button variant="outline" size="lg" onClick={onContactClick}>
         Get in Touch

@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="hero-content flex-col lg:flex-row-reverse max-w-6xl mx-auto px-4 relative">
         <div className="max-w-sm lg:ml-10">
           <img
-            src="/Ezekiel.JPG"
+            src="/DevTikey.png"
             alt={PERSONAL_INFO.name}
             className="w-full h-full object-cover rounded-lg shadow-2xl"
             loading="lazy"
