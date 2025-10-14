@@ -10,7 +10,7 @@ export const TechMarquee: React.FC<TechMarqueeProps> = ({ logos }) => {
   return (
     <>
       <div className="divider text-2xl font-bold mt-20 mb-8">
-        My Technologies
+        Learned Languages
       </div>
       <div className="mt-12">
         <div className="rounded-2xl bg-gradient-to-r from-base-100/50 to-base-200/50 backdrop-blur-sm p-6 border border-base-300/30 shadow-lg">
@@ -23,7 +23,7 @@ export const TechMarquee: React.FC<TechMarqueeProps> = ({ logos }) => {
             pauseOnHover
             scaleOnHover
             fadeOut
-            ariaLabel="Technologies marquee showcasing programming languages and tools"
+            ariaLabel="Learned languages marquee showcasing programming languages and tools"
           />
         </div>
       </div>

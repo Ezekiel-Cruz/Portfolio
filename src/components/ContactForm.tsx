@@ -2,6 +2,12 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { trackContactForm } from "../utils/analytics";
+import {
+  HiOutlineMail,
+  HiOutlinePhone,
+  HiOutlineLocationMarker,
+} from "react-icons/hi";
+import { FaFacebookF, FaGithub, FaDiscord } from "react-icons/fa";
 
 interface ContactFormData {
   name: string;
@@ -75,33 +81,35 @@ export default function ContactForm() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    📧
+                    <HiOutlineMail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
                     <p className="text-base-content/70">
-                      ezekiel.cruz@example.com
+                      ezekielcruz019@gmail.com
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    📱
+                    <HiOutlinePhone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-base-content/70">+1 (555) 123-4567</p>
+                    <p className="text-base-content/70">09161404002</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    📍
+                    <HiOutlineLocationMarker className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <p className="font-semibold">Location</p>
-                    <p className="text-base-content/70">Your City, Country</p>
+                    <p className="text-base-content/70">
+                      Malolos, Bulacan, Philippines
+                    </p>
                   </div>
                 </div>
               </div>
@@ -112,28 +120,28 @@ export default function ContactForm() {
                 <h4 className="font-semibold mb-4">Follow Me</h4>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/kielpogi.cruz"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-circle btn-outline hover:btn-primary"
                   >
-                    📘
+                    <FaFacebookF className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://github.com/Ezekiel-Cruz"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-circle btn-outline hover:btn-primary"
                   >
-                    🐙
+                    <FaGithub className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://discord.com/users/meclose"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-circle btn-outline hover:btn-primary"
                   >
-                    💼
-                  </a>
-                  <a
-                    href="#"
-                    className="btn btn-circle btn-outline hover:btn-primary"
-                  >
-                    🐦
+                    <FaDiscord className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -263,7 +271,7 @@ export default function ContactForm() {
                       isSubmitting ? "loading" : ""
                     }`}
                   >
-                    {isSubmitting ? "Sending..." : "🚀 Send Message"}
+                    {isSubmitting ? "Sending..." : " Send Message"}
                   </button>
                 </div>
 
@@ -271,7 +279,7 @@ export default function ContactForm() {
                 {submitStatus === "success" && (
                   <div className="alert alert-success">
                     <span>
-                      ✅ Message sent successfully! I'll get back to you soon.
+                      Message sent successfully! I'll get back to you soon.
                     </span>
                   </div>
                 )}
@@ -279,7 +287,7 @@ export default function ContactForm() {
                 {submitStatus === "error" && (
                   <div className="alert alert-error">
                     <span>
-                      ❌ Failed to send message. Please try again or email me
+                      Failed to send message. Please try again or email me
                       directly.
                     </span>
                   </div>

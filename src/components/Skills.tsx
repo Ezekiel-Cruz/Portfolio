@@ -10,14 +10,21 @@ export default function Skills() {
     <Section id="skills" className="bg-base-200/50 backdrop-blur-sm">
       <Container>
         <SectionHeader
-          title="My Tech Stack"
-          subtitle="Technologies I work with to build efficient web and mobile applications. Each skill represents hands-on experience and continuous learning."
+          title="Tech Stack"
+          subtitle="Modern technologies I use to build scalable and efficient web applications."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {TECH_STACKS.map((category, index) => (
-            <TechStackCard key={index} category={category} />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+          {/* Frontend - Full column */}
+          <div className="lg:col-span-1">
+            <TechStackCard category={TECH_STACKS[0]} />
+          </div>
+
+          {/* Backend and Database - Shared column */}
+          <div className="lg:col-span-1 space-y-6">
+            <TechStackCard category={TECH_STACKS[1]} />
+            <TechStackCard category={TECH_STACKS[2]} />
+          </div>
         </div>
 
         <TechMarquee logos={techLogos} />

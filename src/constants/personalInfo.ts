@@ -1,36 +1,36 @@
 // Personal information constants
 export const PERSONAL_INFO = {
   name: "Ezekiel Cruz",
-  role: "Full Stack Developer",
-  experience: "3+ years",
-  passion: "Programming",
-  motto: "Code with purpose, build with passion",
-  location: "Philippines",
+  role: "Aspiring Website Developer",
+  experience: "5+ years",
+  passion: "Web Development",
+  motto: "Creating digital experiences that inspire",
+  location: "Malolos, Bulacan, Philippines",
   university: "La Consolacion University of the Philippines",
-  email: "ezekiel.cruz@example.com", // Replace with actual email
-  phone: "+63 XXX XXX XXXX", // Replace with actual phone
+  email: "ezekielcruz019@gmail.com",
+  phone: "09161404002",
 } as const;
 
 // Statistics data
 export const STATS = [
   {
-    title: "Projects Completed",
-    value: "5+",
+    title: "Web Projects",
+    value: "4+",
   },
   {
-    title: "Years Experience", 
+    title: "Years Experience",
     value: "3+",
   },
   {
-    title: "Languages",
-    value: "6+",
+    title: "Technologies",
+    value: "10+",
   },
 ] as const;
 
 // Hero typing text animations
 export const HERO_TYPING_TEXT = [
   "Frameworks guide me.",
-  "Libraries support me.", 
+  "Libraries support me.",
   "But innovation?",
   "That's pure me.",
 ] as const;

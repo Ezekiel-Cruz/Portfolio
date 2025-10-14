@@ -3,48 +3,70 @@ export default function WhatIDo() {
     <section id="what-i-do" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">What I Do</h2>
-          <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
-            I specialize in creating exceptional digital experiences through
-            modern web technologies
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">What I Do</h2>
+          <p className="text-xl text-base-content/70 max-w-4xl mx-auto leading-relaxed">
+            I develop high-quality, scalable, and secure web applications using
+            modern technologies and industry-standard development practices. My
+            work focuses on delivering reliable solutions that meet both user
+            expectations and business goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="card bg-base-200/80 backdrop-blur-sm shadow-xl">
-            <div className="card-body text-center">
-              <div className="text-5xl mb-4">🎨</div>
-              <h3 className="card-title justify-center text-2xl mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Frontend Development */}
+          <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+            <div className="card-body">
+              <h3 className="card-title justify-center text-2xl mb-6">
                 Frontend Development
               </h3>
-              <p className="text-base-content/70">
-                Creating stunning, responsive user interfaces with React and
-                Tailwind CSS.
+              <p className="text-base-content/70 leading-relaxed">
+                I build responsive and high-performing user interfaces using
+                React.js, Tailwind CSS, and Vite. I ensure clean, maintainable
+                code and a seamless user experience across all platforms.
               </p>
             </div>
           </div>
 
-          <div className="card bg-base-200/80 backdrop-blur-sm shadow-xl">
-            <div className="card-body text-center">
-              <div className="text-5xl mb-4">⚙️</div>
-              <h3 className="card-title justify-center text-2xl mb-4">
+          {/* Backend Development */}
+          <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+            <div className="card-body">
+              <h3 className="card-title justify-center text-2xl mb-6">
                 Backend Development
               </h3>
-              <p className="text-base-content/70">
-                Focused on back-end development with PHP and Java, building
-                reliable database-driven applications using MySQL.
+              <p className="text-base-content/70 leading-relaxed">
+                I develop robust and efficient server-side applications using
+                Node.js and Express.js. My implementations are optimized for
+                performance, security, and scalability to support complex
+                business requirements.
               </p>
             </div>
           </div>
 
-          <div className="card bg-base-200/80 backdrop-blur-sm shadow-xl">
-            <div className="card-body text-center">
-              <div className="text-5xl mb-4">📱</div>
-              <h3 className="card-title justify-center text-2xl mb-4">
-                Mobile Development
+          {/* Database Management */}
+          <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+            <div className="card-body">
+              <h3 className="card-title justify-center text-2xl mb-6">
+                Database Management
               </h3>
-              <p className="text-base-content/70">
-                Developing mobile application with Flatter
+              <p className="text-base-content/70 leading-relaxed">
+                I design and manage structured databases using MySQL and
+                PostgreSQL. I prioritize data integrity, consistency, and
+                performance to ensure reliable and secure data handling.
+              </p>
+            </div>
+          </div>
+
+          {/* Full-Stack Integration */}
+          <div className="card bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300">
+            <div className="card-body">
+              <h3 className="card-title justify-center text-2xl mb-6">
+                Full-Stack Integration
+              </h3>
+              <p className="text-base-content/70 leading-relaxed">
+                I integrate frontend and backend systems into cohesive,
+                production-ready web applications. My approach emphasizes
+                stability, speed, and maintainability to support long-term
+                growth and innovation.
               </p>
             </div>
           </div>

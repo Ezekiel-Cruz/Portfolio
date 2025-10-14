@@ -19,7 +19,7 @@ export default function Projects() {
             {projects.map((project) => (
               <div
                 key={project.title}
-                className="bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300"
+                className="bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 h-full"
               >
                 <ProjectCard project={project} />
               </div>
