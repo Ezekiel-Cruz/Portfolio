@@ -11,18 +11,20 @@ export default function About() {
   return (
     <Section id="about" className="bg-base-200/50 backdrop-blur-sm">
       <Container>
-        <div className="hero-content flex-col lg:flex-row-reverse max-w-7xl mx-auto gap-12">
-          <div className="lg:w-2/5 flex-shrink-0">
-            <CodeMockup developerInfo={PERSONAL_INFO} />
-          </div>
-
-          <div className="lg:w-3/5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-10xl mx-auto items-center">
+          <div className="lg:col-span-1"></div>
+          <div className="lg:col-span-5">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
             <p className="text-lg mb-6 text-base-content/80 leading-relaxed">
               {aboutText}
             </p>
             <StatsGrid stats={STATS} />
           </div>
+
+          <div className="lg:col-span-6 flex justify-center">
+            <CodeMockup developerInfo={PERSONAL_INFO} />
+          </div>
+          <div className="lg:col-span-1"></div>
         </div>
       </Container>
     </Section>

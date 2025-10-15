@@ -93,7 +93,7 @@ export const CodeMockup: React.FC<CodeMockupProps> = ({ developerInfo }) => {
   const emptyLineNumber = closingLineNumber + 1;
   const diceLineNumber = emptyLineNumber + 1;
   return (
-    <div className="mockup-code w-max max-w-md">
+    <div className="mockup-code w-full max-w-xl">
       {/* Developer Object */}
       <CodeLine prefix="1">const developer = &#123;</CodeLine>
       <CodeLine prefix="2"> name: "{developerInfo.name}",</CodeLine>
