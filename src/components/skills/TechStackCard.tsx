@@ -22,6 +22,9 @@ const TechItem: React.FC<TechItemProps> = ({ tech, isExpanded, onToggle }) => {
         <span className="text-lg font-bold text-base-content flex-grow">
           {tech.name}
         </span>
+        <span className="text-sm text-base-content/70 mr-3">
+          {tech.experience}
+        </span>
         <div
           className={`transition-transform duration-200 ${
             isExpanded ? "rotate-180" : ""
@@ -45,23 +48,18 @@ const TechItem: React.FC<TechItemProps> = ({ tech, isExpanded, onToggle }) => {
 
       {isExpanded && (
         <div className="p-6 bg-base-100/30 border-t border-base-300/20 animate-in slide-in-from-top-2 duration-200">
-          <div className="space-y-4">
-            <div>
-              <h4 className="font-semibold text-base-content mb-2">
-                What is {tech.name}?
-              </h4>
-              <p className="text-base-content/80 leading-relaxed">
-                {tech.description}
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-base-content mb-2">
-                How I use it:
-              </h4>
-              <p className="text-base-content/80 leading-relaxed">
-                {tech.usage}
-              </p>
-            </div>
+          <div className="text-base-content leading-relaxed whitespace-pre-line">
+            {tech.usage.split("\n").map((line, index) => (
+              <div key={index}>
+                {line.includes("Where I use it:") ||
+                line.includes("When I use it:") ||
+                line.includes("How I use it:") ? (
+                  <span className="font-bold text-white">{line}</span>
+                ) : (
+                  line
+                )}
+              </div>
+            ))}
           </div>
         </div>
       )}
