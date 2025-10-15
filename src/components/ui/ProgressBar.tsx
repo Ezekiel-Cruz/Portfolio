@@ -1,5 +1,4 @@
 import React from "react";
-import type { Technology } from "../../constants/techData";
 
 interface ProgressBarProps {
   label: string;
@@ -29,28 +28,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
           max="100"
         />
       </div>
-    </div>
-  );
-};
-
-interface TechSkillsListProps {
-  technologies: Technology[];
-}
-
-export const TechSkillsList: React.FC<TechSkillsListProps> = ({
-  technologies,
-}) => {
-  return (
-    <div className="space-y-5">
-      {technologies.map((tech, index) => (
-        <ProgressBar
-          key={index}
-          label={tech.name}
-          experience={tech.experience}
-          level={tech.level}
-          color={tech.color}
-        />
-      ))}
     </div>
   );
 };
