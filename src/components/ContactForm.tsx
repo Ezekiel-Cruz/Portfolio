@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { trackContactForm } from "../utils/analytics";
 import {
   HiOutlineMail,
@@ -12,6 +13,7 @@ interface ContactFormData {
   name: string;
   email: string;
   message: string;
+  "h-captcha-response"?: string;
 }
 
 export default function ContactForm() {
@@ -19,13 +21,19 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const captchaRef = useRef<unknown | null>(null);
 
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     formState: { errors },
   } = useForm<ContactFormData>();
+
+  const onHCaptchaChange = (token: string) => {
+    setValue("h-captcha-response", token, { shouldValidate: true });
+  };
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -41,6 +49,9 @@ export default function ContactForm() {
       formData.append("email", data.email);
       formData.append("message", data.message);
       formData.append("access_key", accessKey);
+      if (data["h-captcha-response"]) {
+        formData.append("h-captcha-response", data["h-captcha-response"]);
+      }
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -240,15 +251,33 @@ export default function ContactForm() {
                   )}
                 </div>
 
+                {/* hCaptcha token (hidden field) and widget under the Message field */}
+                <input type="hidden" {...register("h-captcha-response", { required: true })} />
+                <div className="form-control mb-4">
+                  <HCaptcha
+                    ref={captchaRef}
+                    sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY || "50b2fe65-b00b-4b9e-ad62-3ba471098be2"}
+                    reCaptchaCompat={false}
+                    onVerify={onHCaptchaChange}
+                  />
+                  {errors["h-captcha-response"] && (
+                    <label className="label">
+                      <span className="label-text-alt text-error">Please complete the captcha</span>
+                    </label>
+                  )}
+                </div>
+
                 <div className="form-control">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`btn btn-primary btn-lg w-full ${
-                      isSubmitting ? "loading" : ""
-                    }`}
+                    aria-busy={isSubmitting}
+                    className="btn btn-primary btn-lg w-full"
                   >
-                    {isSubmitting ? "Sending..." : " Send Message"}
+                    {isSubmitting && (
+                      <span className="loading loading-spinner loading-sm mr-2" aria-hidden="true"></span>
+                    )}
+                    <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                   </button>
                 </div>
 
@@ -264,8 +293,7 @@ export default function ContactForm() {
                 {submitStatus === "error" && (
                   <div className="alert alert-error">
                     <span>
-                      Failed to send message. Please try again or email me
-                      directly.
+                      Failed to send message. Please complete the captcha and try again.
                     </span>
                   </div>
                 )}
