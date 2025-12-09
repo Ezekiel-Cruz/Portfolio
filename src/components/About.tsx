@@ -4,9 +4,7 @@ import { CodeMockup } from "./about/CodeMockup";
 import { PERSONAL_INFO, STATS } from "../constants/personalInfo";
 
 export default function About() {
-  const aboutText = `I'm ${PERSONAL_INFO.name}, an aspiring Website Developer and IT student at ${PERSONAL_INFO.university}. With over 3 years of experience, I specialize in building modern, responsive, and high-performing websites.
-
-  I'm skilled in front-end development using JavaScript, React, and Tailwind, and experienced in back-end development with Node.js, and PostgreSQL. My goal is to become a professional developer who builds impactful and scalable digital solutions.`;
+  const aboutText = `I'm ${PERSONAL_INFO.name}, an aspiring Website Developer and IT student at ${PERSONAL_INFO.university}, with over 3 years of experience building modern, responsive websites. I specialize in full-stack development using React, Node.js, and PostgreSQL. My goal is to become a professional developer building impactful digital solutions.`;
 
   return (
     <Section id="about" className="bg-base-200/50 backdrop-blur-sm">

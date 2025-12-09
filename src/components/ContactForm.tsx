@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
 import { trackContactForm } from "../utils/analytics";
 import {
   HiOutlineMail,
@@ -12,7 +11,6 @@ import { FaFacebookF, FaGithub, FaDiscord } from "react-icons/fa";
 interface ContactFormData {
   name: string;
   email: string;
-  subject: string;
   message: string;
 }
 
@@ -34,27 +32,31 @@ export default function ContactForm() {
     setSubmitStatus("idle");
 
     try {
-      // EmailJS configuration
-      const templateParams = {
-        from_name: data.name,
-        from_email: data.email,
-        subject: data.subject,
-        message: data.message,
-        to_name: "Ezekiel Cruz",
-      };
+      const accessKey =
+        import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+        "93f83f47-9537-4627-ab57-2d19311d8e82";
 
-      await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        templateParams,
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
-      );
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
+      formData.append("access_key", accessKey);
 
-      setSubmitStatus("success");
-      trackContactForm();
-      reset();
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitStatus("success");
+        trackContactForm();
+        reset();
+      } else {
+        setSubmitStatus("error");
+      }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error submitting form:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -210,32 +212,7 @@ export default function ContactForm() {
                   </div>
                 </div>
 
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text font-semibold">Subject *</span>
-                  </label>
-                  <input
-                    type="text"
-                    className={`input input-bordered w-full ${
-                      errors.subject ? "input-error" : ""
-                    }`}
-                    placeholder="Project Discussion"
-                    {...register("subject", {
-                      required: "Subject is required",
-                      minLength: {
-                        value: 5,
-                        message: "Subject must be at least 5 characters",
-                      },
-                    })}
-                  />
-                  {errors.subject && (
-                    <label className="label">
-                      <span className="label-text-alt text-error">
-                        {errors.subject.message}
-                      </span>
-                    </label>
-                  )}
-                </div>
+                
 
                 <div className="form-control">
                   <label className="label">
