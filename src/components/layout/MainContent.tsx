@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../Header";
-import Hero from "../Hero";
-import About from "../About";
-import WhatIDo from "../WhatIDo";
-import Skills from "../Skills";
-import Projects from "../Projects";
-import ContactForm from "../ContactForm";
-import Footer from "../Footer";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Hero } from "../../features/home";
+import { About } from "../../features/about";
+import { WhatIDo } from "../../features/services";
+import { Skills } from "../../features/skills";
+import { Projects } from "../../features/projects";
+import { ContactForm } from "../../features/contact";
 
 export const MainContent: React.FC = () => {
   return (

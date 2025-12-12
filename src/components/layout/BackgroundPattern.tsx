@@ -1,5 +1,5 @@
 import React from "react";
-import Squares from "../Squares";
+import Squares from "../animations/Squares";
 
 export const BackgroundPattern: React.FC = () => {
   return (

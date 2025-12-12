@@ -70,17 +70,179 @@ npm run build
 ## Project Structure
 
 ```
-src/
-├── components/          # React components
-│   ├── Header.tsx      # Navigation header
-│   ├── Hero.tsx        # Landing section
-│   ├── About.tsx       # About me section
-│   ├── WhatIDo.tsx     # Services section
-│   ├── Skills.tsx      # Tech stack section
-│   ├── Projects.tsx    # Projects showcase
-│   └── Footer.tsx      # Contact footer
-├── assets/             # Images and static files
-└── App.tsx            # Main app component
+Portfolio/
+├── public/                          # Static assets
+│   ├── images/
+│   ├── fonts/
+│   └── favicon.ico
+│
+├── src/
+│   ├── app/                         # App-level configuration
+│   │   ├── App.tsx
+│   │   └── providers/               # Context providers
+│   │       ├── ThemeProvider.tsx
+│   │       ├── AdminProvider.tsx
+│   │       └── index.ts
+│   │
+│   ├── features/                    # Feature-based modules
+│   │   ├── home/
+│   │   │   ├── components/
+│   │   │   │   ├── Hero/
+│   │   │   │   │   ├── Hero.tsx
+│   │   │   │   │   ├── HeroActions.tsx
+│   │   │   │   │   ├── HeroContent.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── LogoLoop.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── about/
+│   │   │   ├── components/
+│   │   │   │   ├── About.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── skills/
+│   │   │   ├── components/
+│   │   │   │   ├── Skills.tsx
+│   │   │   │   ├── TechMarquee.tsx
+│   │   │   │   ├── TechStackCard.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── constants/
+│   │   │   │   └── techData.tsx
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── services/
+│   │   │   ├── components/
+│   │   │   │   ├── WhatIDo.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── projects/
+│   │   │   ├── components/
+│   │   │   │   ├── Projects.tsx
+│   │   │   │   ├── ProjectCard.tsx
+│   │   │   │   ├── ProjectModal.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── data/
+│   │   │   │   └── projects.ts
+│   │   │   ├── hooks/
+│   │   │   │   └── useProjectSearch.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── contact/
+│   │   │   ├── components/
+│   │   │   │   ├── ContactForm.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   └── admin/
+│   │       ├── components/
+│   │       │   ├── AdminToolbar.tsx
+│   │       │   ├── AdminLoginModal.tsx
+│   │       │   └── index.ts
+│   │       ├── hooks/
+│   │       │   └── index.ts
+│   │       └── index.ts
+│   │
+│   ├── components/                  # Shared/common components
+│   │   ├── layout/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── MainContent.tsx
+│   │   │   ├── BackgroundPattern.tsx
+│   │   │   ├── Layout.tsx
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── navigation/
+│   │   │   ├── Navigation.tsx
+│   │   │   ├── Logo.tsx
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── ui/                      # Reusable UI primitives
+│   │   │   ├── Button.tsx
+│   │   │   ├── ProgressBar.tsx
+│   │   │   ├── Stats.tsx
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── animations/              # Reusable animations
+│   │   │   ├── Squares.tsx
+│   │   │   ├── TextType.tsx
+│   │   │   ├── TypingCursor.tsx
+│   │   │   ├── TypingText.tsx
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── theme/
+│   │   │   ├── ThemeToggle.tsx
+│   │   │   └── index.ts
+│   │   │
+│   │   └── index.ts
+│   │
+│   ├── hooks/                       # Shared custom hooks
+│   │   ├── useAnalytics.ts
+│   │   ├── useCursorAnimation.ts
+│   │   ├── useIntersectionObserver.ts
+│   │   ├── useScroll.ts
+│   │   ├── useTheme.ts
+│   │   ├── useTypingAnimation.ts
+│   │   └── index.ts
+│   │
+│   ├── lib/                         # Third-party integrations
+│   │   ├── analytics/
+│   │   │   ├── analytics.ts
+│   │   │   └── index.ts
+│   │   └── hcaptcha/
+│   │       └── hcaptcha-react.d.ts
+│   │
+│   ├── utils/                       # Utility functions
+│   │   ├── smoothScroll.ts
+│   │   ├── storage.ts
+│   │   └── index.ts
+│   │
+│   ├── types/                       # Global TypeScript types
+│   │   ├── project.ts
+│   │   ├── vite-env-override.d.ts
+│   │   └── index.ts
+│   │
+│   ├── constants/                   # Global constants
+│   │   ├── personalInfo.ts
+│   │   └── index.ts
+│   │
+│   ├── styles/                      # Global styles
+│   │   └── index.css
+│   │
+│   ├── main.tsx                     # Entry point
+│   └── vite-env.d.ts
+│
+├── .env.example                     # Environment variables template
+├── eslint.config.js
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
+
+## Architecture
+
+This project follows a **feature-based architecture** for better scalability and maintainability:
+
+- **`features/`**: Each feature is self-contained with its own components, hooks, data, and constants
+- **`components/`**: Shared components used across multiple features
+- **`app/`**: App-level configuration including providers and routing
+- **`lib/`**: Third-party library integrations and configurations
+- **`hooks/`**: Global custom hooks shared across features
+- **`utils/`**: Pure utility functions
+- **`types/`**: Global TypeScript type definitions
+- **`constants/`**: Global constants and configuration
+
+This structure makes it easy to:
+- Find related code quickly
+- Test features in isolation
+- Scale the application by adding new features
+- Maintain clear boundaries between different parts of the app
 ```
 
 ## Contact
