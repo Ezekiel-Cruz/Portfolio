@@ -8,8 +8,11 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ name, imageSrc, onClick }) => {
   return (
-    <a onClick={onClick} className="btn btn-ghost text-xl cursor-pointer">
-      <img src={imageSrc} alt="Logo" className="inline-block w-8 h-8 mr-2" />
+    <a 
+      onClick={onClick} 
+      className="flex items-center gap-2 px-2 py-1 text-lg font-medium text-base-content/90 hover:text-base-content cursor-pointer transition-all duration-300"
+    >
+      <img src={imageSrc} alt="Logo" className="w-8 h-8" />
       {name}
     </a>
   );

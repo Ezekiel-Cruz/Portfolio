@@ -1,4 +1,5 @@
 import React from "react";
+import * as motion from "motion/react-client";
 
 interface HeroContentProps {
   name: string;
@@ -15,18 +16,29 @@ export const HeroContent: React.FC<HeroContentProps> = ({
 }) => {
   return (
     <div className="text-center lg:text-left">
-      <h1 className="mb-6 mt-6 leading-tight space-y-1 sm:space-y-2">
-        <span className="block text-5xl sm:text-6xl font-extrabold">
+      <motion.h1
+        className="mb-4 mt-4 lg:mb-6 lg:mt-6 leading-tight space-y-1"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+      >
+        <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold">
           I'm <span>{name}</span>,
         </span>
-        <span className="block text-2xl sm:text-3xl font-medium text-base-content/80">
+        <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-base-content/80">
           {subtitle1}
         </span>
-        <span className="block text-2xl sm:text-3xl font-medium text-base-content/80">
+        <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-base-content/80">
           {subtitle2}
         </span>
-      </h1>
-      {children}
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+      >
+        {children}
+      </motion.div>
     </div>
   );
 };

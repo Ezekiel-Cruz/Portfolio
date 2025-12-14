@@ -1,4 +1,4 @@
-import { BackgroundPattern, MainContent } from "../components/layout";
+import { MainContent } from "../components/layout";
 import { useAnalytics } from "../hooks/useAnalytics";
 
 function App() {
@@ -6,7 +6,6 @@ function App() {
 
   return (
     <div className="relative min-h-screen">
-      <BackgroundPattern />
       <MainContent />
     </div>
   );

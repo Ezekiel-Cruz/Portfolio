@@ -9,7 +9,10 @@ interface NavItemProps {
 export const NavItem: React.FC<NavItemProps> = ({ id, label, onClick }) => {
   return (
     <li>
-      <a onClick={() => onClick(id)} className="cursor-pointer">
+      <a 
+        onClick={() => onClick(id)} 
+        className="cursor-pointer px-4 py-2 text-sm font-medium text-base-content/70 hover:text-base-content transition-all duration-300 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:bg-transparent"
+      >
         {label}
       </a>
     </li>
@@ -39,7 +42,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   return (
     <div className="flex-none">
       {/* Desktop Navigation - Hidden on mobile */}
-      <ul className="menu menu-horizontal px-1 font-semibold hidden lg:flex">
+      <ul className="menu menu-horizontal px-1 gap-1 hidden lg:flex items-center">
         {items.map((item) => (
           <NavItem
             key={item.id}
@@ -71,13 +74,13 @@ export const Navigation: React.FC<NavigationProps> = ({
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow-lg bg-[#17191C] border border-base-content/10 rounded-xl w-48"
         >
           {items.map((item) => (
             <li key={item.id}>
               <a
                 onClick={() => handleItemClick(item.id)}
-                className="cursor-pointer"
+                className="cursor-pointer text-sm text-base-content/70 hover:text-base-content hover:bg-base-content/5 transition-all duration-200 rounded-lg"
               >
                 {item.label}
               </a>

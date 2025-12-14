@@ -1,30 +1,28 @@
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data/projects";
+import * as motion from "motion/react-client";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h2>
-          <p className="text-xl text-base-content/70 max-w-2xl mx-auto mb-8">
-            Here are some of the projects I've worked on. Each one represents a
-            unique challenge and solution.
+    <section id="projects" className="py-16 sm:py-24 bg-base-100 border-t border-base-content/10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+        <motion.div
+          className="mb-10 sm:mb-16 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Projects</h2>
+          <p className="text-sm sm:text-base text-base-content/60 max-w-xl mx-auto">
+            A selection of projects I've worked on.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Projects Grid */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <div
-                key={project.title}
-                className="bg-base-200/80 backdrop-blur-sm rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 h-full"
-              >
-                <ProjectCard project={project} />
-              </div>
-            ))}
-          </div>
+        <div className="space-y-6 sm:space-y-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
         </div>
       </div>
     </section>

@@ -1,31 +1,16 @@
 // Personal information constants
 export const PERSONAL_INFO = {
   name: "Ezekiel Cruz",
-  role: "Aspiring Website Developer",
-  experience: "3+ years",
-  passion: "Web Development",
+  role: "Full-Stack Web Developer",
+  location: "Philippines",
+  education: "IT Student @ LCUP",
+  passion: "Building impactful web solutions",
   motto: "Always do your best",
-  location: "Malolos, Bulacan, Philippines",
+  funFact: "I believe the best code is written with coffee",
   university: "La Consolacion University of the Philippines",
   email: "ezekielcruz019@gmail.com",
   phone: "09161404002",
 } as const;
-
-// Statistics data
-export const STATS = [
-  {
-    title: "Web Projects",
-    value: "4+",
-  },
-  {
-    title: "Years Experience",
-    value: "3+",
-  },
-  {
-    title: "Technologies",
-    value: "10+",
-  },
-] as const;
 
 // Hero typing text animations
 export const HERO_TYPING_TEXT = [
@@ -38,7 +23,6 @@ export const HERO_TYPING_TEXT = [
 // Navigation menu items
 export const NAV_ITEMS = [
   { id: "about", label: "About Me" },
-  { id: "what-i-do", label: "What I Do" },
   { id: "skills", label: "Tech Stack" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },

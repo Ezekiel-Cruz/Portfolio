@@ -7,7 +7,8 @@ import {
   HiOutlinePhone,
   HiOutlineLocationMarker,
 } from "react-icons/hi";
-import { FaFacebookF, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaDiscord, FaLinkedinIn } from "react-icons/fa";
+import * as motion from "motion/react-client";
 
 interface ContactFormData {
   name: string;
@@ -75,107 +76,129 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-base-200/50 backdrop-blur-sm">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
-          <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from
-            you!
+    <section id="contact" className="py-16 px-4 md:py-24 md:px-8 bg-base-100 border-t border-base-content/10">
+      <div className="container mx-auto max-w-4xl">
+        <motion.div
+          className="mb-8 md:mb-12 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">Get In Touch</h2>
+          <p className="text-base-content/60 text-sm md:text-base max-w-xl mx-auto">
+            Have a project in mind? Let's work together.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="card bg-base-200/50 backdrop-blur-sm shadow-xl p-6">
-              <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+          <motion.div
+            className="space-y-4 md:space-y-6"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <div className="bg-base-200 rounded-xl md:rounded-2xl p-4 md:p-6 border border-base-300/20">
+              <h3 className="text-base md:text-lg font-semibold mb-4 md:mb-5">Contact Info</h3>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <HiOutlineMail className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-base-300 rounded-lg flex items-center justify-center">
+                    <HiOutlineMail className="w-5 h-5 text-base-content/70" />
                   </div>
                   <div>
-                    <p className="font-semibold">Email</p>
-                    <p className="text-base-content/70">
+                    <p className="text-sm text-base-content/50">Email</p>
+                    <p className="text-sm font-medium">
                       ezekielcruz019@gmail.com
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <HiOutlinePhone className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-base-300 rounded-lg flex items-center justify-center">
+                    <HiOutlinePhone className="w-5 h-5 text-base-content/70" />
                   </div>
                   <div>
-                    <p className="font-semibold">Phone</p>
-                    <p className="text-base-content/70">09161404002</p>
+                    <p className="text-sm text-base-content/50">Phone</p>
+                    <p className="text-sm font-medium">09161404002</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <HiOutlineLocationMarker className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-base-300 rounded-lg flex items-center justify-center">
+                    <HiOutlineLocationMarker className="w-5 h-5 text-base-content/70" />
                   </div>
                   <div>
-                    <p className="font-semibold">Location</p>
-                    <p className="text-base-content/70">
+                    <p className="text-sm text-base-content/50">Location</p>
+                    <p className="text-sm font-medium">
                       Malolos, Bulacan, Philippines
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="divider"></div>
+              <div className="border-t border-base-300/10 my-5"></div>
 
               <div>
-                <h4 className="font-semibold mb-4">Follow Me</h4>
-                <div className="flex gap-4">
+                <h4 className="text-sm font-medium mb-3 text-base-content/70">Follow Me</h4>
+                <div className="flex gap-2">
                   <a
                     href="https://www.facebook.com/kielpogi.cruz"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-circle btn-outline hover:btn-primary"
+                    className="w-9 h-9 flex items-center justify-center rounded-lg bg-base-300 hover:bg-base-300/70 transition-colors"
                   >
-                    <FaFacebookF className="w-5 h-5" />
+                    <FaFacebookF className="w-4 h-4" />
                   </a>
                   <a
                     href="https://github.com/Ezekiel-Cruz"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-circle btn-outline hover:btn-primary"
+                    className="w-9 h-9 flex items-center justify-center rounded-lg bg-base-300 hover:bg-base-300/70 transition-colors"
                   >
-                    <FaGithub className="w-5 h-5" />
+                    <FaGithub className="w-4 h-4" />
                   </a>
                   <a
                     href="https://discord.com/users/meclose"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-circle btn-outline hover:btn-primary"
+                    className="w-9 h-9 flex items-center justify-center rounded-lg bg-base-300 hover:bg-base-300/70 transition-colors"
                   >
-                    <FaDiscord className="w-5 h-5" />
+                    <FaDiscord className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/ezekiel-cruz-685975399/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 flex items-center justify-center rounded-lg bg-base-300 hover:bg-base-300/70 transition-colors"
+                  >
+                    <FaLinkedinIn className="w-4 h-4" />
                   </a>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="card bg-base-200/50 backdrop-blur-sm shadow-xl">
-            <div className="card-body">
-              <h3 className="text-2xl font-bold mb-6">Send Message</h3>
+          <motion.div
+            className="bg-base-200 rounded-xl md:rounded-2xl p-4 md:p-6 border border-base-300/20"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          >
+            <h3 className="text-base md:text-lg font-semibold mb-4 md:mb-5">Send Message</h3>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text font-semibold">Name *</span>
-                    </label>
+                  <div>
+                    <label className="text-sm text-base-content/70 mb-1.5 block">Name *</label>
                     <input
                       type="text"
-                      className={`input input-bordered w-full ${
-                        errors.name ? "input-error" : ""
+                      className={`w-full px-4 py-2.5 rounded-lg bg-base-300/20 border border-base-content/20 focus:border-base-content/50 focus:outline-none transition-colors text-sm ${
+                        errors.name ? "border-error" : ""
                       }`}
                       placeholder="Your Name"
                       {...register("name", {
@@ -187,22 +210,16 @@ export default function ContactForm() {
                       })}
                     />
                     {errors.name && (
-                      <label className="label">
-                        <span className="label-text-alt text-error">
-                          {errors.name.message}
-                        </span>
-                      </label>
+                      <p className="text-xs text-error mt-1">{errors.name.message}</p>
                     )}
                   </div>
 
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text font-semibold">Email *</span>
-                    </label>
+                  <div>
+                    <label className="text-sm text-base-content/70 mb-1.5 block">Email *</label>
                     <input
                       type="email"
-                      className={`input input-bordered w-full ${
-                        errors.email ? "input-error" : ""
+                      className={`w-full px-4 py-2.5 rounded-lg bg-base-300/20 border border-base-content/20 focus:border-base-content/50 focus:outline-none transition-colors text-sm ${
+                        errors.email ? "border-error" : ""
                       }`}
                       placeholder="your.email@example.com"
                       {...register("email", {
@@ -214,26 +231,20 @@ export default function ContactForm() {
                       })}
                     />
                     {errors.email && (
-                      <label className="label">
-                        <span className="label-text-alt text-error">
-                          {errors.email.message}
-                        </span>
-                      </label>
+                      <p className="text-xs text-error mt-1">{errors.email.message}</p>
                     )}
                   </div>
                 </div>
 
                 
 
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text font-semibold">Message *</span>
-                  </label>
+                <div>
+                  <label className="text-sm text-base-content/70 mb-1.5 block">Message *</label>
                   <textarea
-                    className={`textarea textarea-bordered h-32 w-full ${
-                      errors.message ? "textarea-error" : ""
+                    className={`w-full px-4 py-2.5 rounded-lg bg-base-300/20 border border-base-content/20 focus:border-base-content/50 focus:outline-none transition-colors text-sm h-28 resize-none ${
+                      errors.message ? "border-error" : ""
                     }`}
-                    placeholder="Tell me about your project or ideas..."
+                    placeholder="Tell me about your project..."
                     {...register("message", {
                       required: "Message is required",
                       minLength: {
@@ -243,63 +254,50 @@ export default function ContactForm() {
                     })}
                   ></textarea>
                   {errors.message && (
-                    <label className="label">
-                      <span className="label-text-alt text-error">
-                        {errors.message.message}
-                      </span>
-                    </label>
+                    <p className="text-xs text-error mt-1">{errors.message.message}</p>
                   )}
                 </div>
 
-                {/* hCaptcha token (hidden field) and widget under the Message field */}
+                {/* hCaptcha */}
                 <input type="hidden" {...register("h-captcha-response", { required: true })} />
-                <div className="form-control mb-4">
-                  <HCaptcha
-                    ref={captchaRef}
-                    sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY || "50b2fe65-b00b-4b9e-ad62-3ba471098be2"}
-                    reCaptchaCompat={false}
-                    onVerify={onHCaptchaChange}
-                  />
+                <div className="mt-2 flex justify-center overflow-hidden">
+                  <div className="transform scale-[0.85] sm:scale-100">
+                    <HCaptcha
+                      ref={captchaRef}
+                      sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY || "50b2fe65-b00b-4b9e-ad62-3ba471098be2"}
+                      reCaptchaCompat={false}
+                      onVerify={onHCaptchaChange}
+                      size="normal"
+                    />
+                  </div>
                   {errors["h-captcha-response"] && (
-                    <label className="label">
-                      <span className="label-text-alt text-error">Please complete the captcha</span>
-                    </label>
+                    <p className="text-xs text-error mt-1">Please complete the captcha</p>
                   )}
                 </div>
 
-                <div className="form-control">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    aria-busy={isSubmitting}
-                    className="btn btn-primary btn-lg w-full"
-                  >
-                    {isSubmitting && (
-                      <span className="loading loading-spinner loading-sm mr-2" aria-hidden="true"></span>
-                    )}
-                    <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  aria-busy={isSubmitting}
+                  className="w-full py-3 px-4 bg-primary text-primary-content rounded-lg font-medium text-sm hover:bg-primary/90 transition-opacity disabled:opacity-50"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
 
                 {/* Status Messages */}
                 {submitStatus === "success" && (
-                  <div className="alert alert-success">
-                    <span>
-                      Message sent successfully! I'll get back to you soon.
-                    </span>
+                  <div className="p-3 rounded-lg bg-success/20 text-success text-sm">
+                    Message sent successfully! I'll get back to you soon.
                   </div>
                 )}
 
                 {submitStatus === "error" && (
-                  <div className="alert alert-error">
-                    <span>
-                      Failed to send message. Please complete the captcha and try again.
-                    </span>
+                  <div className="p-3 rounded-lg bg-error/20 text-error text-sm">
+                    Failed to send message. Please try again.
                   </div>
                 )}
               </form>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
