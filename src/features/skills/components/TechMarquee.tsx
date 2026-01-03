@@ -19,6 +19,7 @@ export const TechMarquee: React.FC<TechMarqueeProps> = ({ logos }) => {
           pauseOnHover
           scaleOnHover
           fadeOut
+          fadeOutColor="var(--color-base-200)"
           ariaLabel="Technology marquee showcasing programming languages and tools"
         />
       </div>
